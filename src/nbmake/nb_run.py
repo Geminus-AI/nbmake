@@ -60,7 +60,8 @@ class NotebookRun:
                 record_timing=True,
                 **extra_kwargs,
             )
-            c.execute(cwd=self.filename.parent)
+            #c.execute(cwd=self.filename.parent)
+            c.execute()
         except CellExecutionError:
             error = self._get_error(nb)
         except CellTimeoutError as err:
